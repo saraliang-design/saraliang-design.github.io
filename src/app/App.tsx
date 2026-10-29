@@ -339,13 +339,13 @@ function HeroSection() {
         >
           <span
             className="text-xs uppercase tracking-[0.1em] font-semibold block mb-5"
-            style={{ color: "#0f3d2b" }}
+            style={{ color: "#8a908d" }}
           >
             {hero.kicker}
           </span>
           <h1
             className="text-[clamp(2.5rem,6vw,4rem)] font-bold leading-[1.1] tracking-tight mb-6"
-            style={{ fontFamily: "var(--font-inter)", color: "#15181a" }}
+            style={{ fontFamily: "var(--font-heading)", fontOpticalSizing: "auto", fontVariationSettings: '"opsz" 32', color: "#15181a" }}
           >
             {hero.titleBefore}
             <span style={{ color: "#6ca578" }}>
@@ -353,7 +353,7 @@ function HeroSection() {
               {hero.titleAfter}
             </span>
           </h1>
-          <p className="text-sm md:text-[0.9375rem]" style={{ color: "#40474a" }}>
+          <p className="text-sm md:text-[0.9375rem]" style={{ color: "#8a908d" }}>
             {hero.tagline}
           </p>
         </motion.div>
@@ -400,7 +400,7 @@ function CaseRow({
           </div>
           <h3
             className="text-[1.375rem] md:text-[1.625rem] font-bold leading-tight mt-1.5"
-            style={{ fontFamily: "var(--font-inter)", color: "#15181a" }}
+            style={{ fontFamily: "var(--font-heading)", color: "#15181a" }}
           >
             {item.title}
           </h3>
@@ -466,13 +466,13 @@ function VisualTeaser({ onNavigate }: { onNavigate: (p: PageId) => void }) {
         <div>
           <span
             className="text-xs uppercase tracking-[0.1em] font-semibold block mb-2"
-            style={{ color: "#0f3d2b" }}
+            style={{ color: "#8a908d" }}
           >
             {visualDesignContent.kicker}
           </span>
           <h3
             className="text-[1.375rem] md:text-[1.625rem] font-bold leading-tight"
-            style={{ fontFamily: "var(--font-inter)", color: "#15181a" }}
+            style={{ fontFamily: "var(--font-heading)", color: "#15181a" }}
           >
             {visualDesignContent.title}
           </h3>
@@ -510,7 +510,7 @@ function TestimonialSection() {
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <span
           className="text-xs uppercase tracking-[0.1em] font-semibold block mb-4"
-          style={{ color: "#0f3d2b" }}
+          style={{ color: "#8a908d" }}
         >
           What partners say
         </span>
@@ -551,7 +551,7 @@ function AboutContactSection() {
           {/* No display heading here: the kicker is the section title, the paragraph carries it. */}
           <h2
             className="text-xs uppercase tracking-[0.1em] font-semibold md:pt-1.5"
-            style={{ color: "#b9d3b0" }}
+            style={{ color: "#9db097", fontFamily: "var(--font-inter)" }}
           >
             About
           </h2>
@@ -567,7 +567,7 @@ function AboutContactSection() {
         >
           <h2
             className="text-2xl md:text-[1.75rem] font-bold leading-snug"
-            style={{ fontFamily: "var(--font-inter)", color: "#eef4e9" }}
+            style={{ fontFamily: "var(--font-heading)", color: "#eef4e9" }}
           >
             Let's work together.
           </h2>
@@ -719,7 +719,7 @@ function ProjectPage({
               >
                 <span
                   className="text-2xl md:text-4xl font-semibold text-foreground"
-                  style={{ fontFamily: "var(--font-epilogue)" }}
+                  style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {nextProject.title}
                 </span>
@@ -751,7 +751,7 @@ function ProjectPage({
           </button>
           <h1
             className="text-4xl md:text-6xl font-semibold text-foreground leading-[1.1] tracking-tight mb-4"
-            style={{ fontFamily: "var(--font-epilogue)" }}
+            style={{ fontFamily: "var(--font-heading)" }}
           >
             {project.title}
           </h1>

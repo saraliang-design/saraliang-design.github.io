@@ -59,19 +59,16 @@ npm run optimize-images:watch  # 監看模式，丟新圖進資料夾會自動�
 
 ### 字體
 
-- **Inter**（`var(--font-inter)`）：新設計系統的主字體，標題和內文都用它。案例頁 `SharingTimeCaseStudy.tsx` 全部用 Inter。
-- **Cormorant Garamond 斜體**（`var(--font-cormorant)`）：**只用在引言/quote**（User Feedback 引言、Persona 卡片裡的語錄），不要用在其他地方。
-- **Epilogue**（`var(--font-epilogue)`）：舊字體，理論上已被 Inter 取代，但還有 **4 處沒改**，是遺留、不是刻意設計：
-  - Nav 左上角 logo「Sara Zhang」（`App.tsx` 裡的 `Nav` function）
-  - 首頁 Hero 中文大標「善於將複雜議題...」（`HeroSection`）
-  - 案例頁底部「Next Project」連結標題（`ProjectPage`）
-  - 找不到專案時的 fallback「即將公開」頁面標題（`ProjectPage` 的 else 分支）
-  - **待決定**：這 4 處要不要也換成 Inter，統一風格；還是刻意保留 Epilogue 做標題字體差異化。目前沒有定論。
-- 字體都在 `src/styles/fonts.css` 用 `@import` 從 Google Fonts 載入，已含 Inter 400/500/600/700 + Cormorant Garamond 斜體 300/400。
+- **Inter**（`var(--font-inter)`）：主字體，內文、小標、介面都用它。`fonts.css` 載入的是**可變字體加光學尺寸軸**（`opsz 14..32`），所以字越大會自動切成 Inter Display 字形。
+- **標題 = Geist**（2026-10-30 定案，Vercel 的開源字體，SIL OFL 可免費商用）：`fonts.css` 的全站 `h1`–`h6` 規則和首頁幾個寫死字體的標題都用 `var(--font-heading)`（Geist，退回 Inter）。試過 Satoshi（標題）、Inter Display（標題）、Roboto Mono（小標）、Crimson Text（引言），Sara 都沒採用，已移除。
+- **注意**：Tailwind v4 的工具類在 `@layer` 裡，會輸給 `fonts.css` 這條沒分層的 `h1`–`h6` 規則。要讓某個標題標籤用別的字體，必須用 inline `style={{ fontFamily }}`，用 class 沒用。
+- **Cormorant Garamond 斜體**（`var(--font-cormorant)`）：只用在案例頁的引言（User Feedback、Persona 語錄）。首頁推薦語是長段落，刻意改成 Inter 正體，因為斜體太難讀。
+- **Epilogue**：只剩 Nav 左上角 logo「Sara Liang」還在用（`App.tsx` 的 `Nav`），其他標題都已換成 Geist。logo 要不要也換還沒決定。
+- 字體都在 `src/styles/fonts.css` 用 `@import` 從 Google Fonts 載入。
 
 ### 間距 / 版型邏輯
 
-- Kicker（區塊小標，如 Impact / Problem / Discovery）：`text-xs uppercase tracking-[0.1em] font-semibold`，顏色用 `--accent`，**永遠維持英文**，不要翻中文（首頁的 Selected Work / About / Contact 同理）。
+- Kicker（區塊小標，如 Impact / Problem / Discovery）：`text-xs uppercase tracking-[0.1em] font-semibold`，顏色用 `--muted` 灰色 `#8a908d`（深綠區塊上用 `--dark-caption` `#9db097`），**永遠維持英文**，不要翻中文（首頁的 Selected Work / About / Contact 同理）。2026-10-30 從深綠改成灰色：Sara 覺得一個區塊裡綠色太多、太雜，規則改成**每個區塊只留一個綠色重點**（連結、重點字、pill、深綠收尾區塊），小標和輔助文字一律用灰。
 - **完整的大中小標層級系統（L1-L6）**：見 `.claude/skills/heading-hierarchy/SKILL.md`。每次新增/修改案例頁的標題類元素（section 標題、子標題、卡片標題、小標籤）都要對照這份層級表，確認沒有「子層級視覺上比父層級還搶眼」的狀況（SDG Energy 的 Version 1/2/3 曾經比 Decision Rationale 還大，就是這個問題的實例）。
 - 卡片：`rounded-2xl`（16px）用 `--surface` 底色；圖片用 `rounded-[20px]`。
 - Icon 圓圈：`w-[52px] h-[52px] rounded-full`，底色 `--accent-light`，圖示或 emoji 置中。
@@ -116,7 +113,7 @@ npm run optimize-images:watch  # 監看模式，丟新圖進資料夾會自動�
 
 **卡住 / 還沒決定的事：**
 1. **Persona 4 張人物照片還沒有**——目前是「照片待上傳」空白佔位（`content/sharing-time.ts` 裡 `persona.cards[].photo` 是 `undefined`）。原本 Figma 匯出的兩張圖其實是研究看板截圖不是人像照，已經刪除。等 Sara 提供新照片後，存進 `src/content/images/sharing-time/`，用檔名告訴 Claude 就能接上。
-2. **字體一致性未決**：Nav logo / 首頁 Hero 中文大標 / Next Project 連結 / Coming Soon fallback 這 4 處還是 Epilogue 字體，要不要統一成 Inter 還沒決定（見上方「字體」小節）。
+2. **字體**：標題已統一成 Geist（2026-10-30），只剩 Nav logo 還是 Epilogue（見上方「字體」小節）。
 3. Decision 區塊的 3 張競品參考圖、Service Blueprint 的左右兩張截圖，都是沿用最早 Figma 匯出的原始素材，還沒跟 Sara 確認是否為最終定案版本。
 
 **下一步：** 沒有明確排定——上面 3 點任一項有新素材或決定，直接接續處理即可。
@@ -202,7 +199,7 @@ npm run optimize-images:watch  # 監看模式，丟新圖進資料夾會自動�
 ## 待辦
 
 - [ ] 取得 Persona 4 張人物照片，放進 `content/images/sharing-time/`，接上 `persona.cards[].photo`
-- [ ] 決定 Epilogue 殘留的 4 處要不要統一成 Inter
+- [ ] 決定 Nav logo 要不要也從 Epilogue 換成 Inter（其他標題已在 2026-10-30 統一成 Geist）
 - [ ] 確認 Decision 參考圖 / Service Blueprint 截圖是否為最終版本
 - [ ] `PROJECTS` 陣列補齊到 6 個條目（目前 5 個：4 真實 + 1 個 `comingSoon`，還差 1 個）
 - [ ] 作品 5-6：比照 Sharing Time 的三件套模式（案例頁元件 + content 資料檔 + images 資料夾）逐一開工，目前完全未開始

@@ -65,7 +65,7 @@ function Kicker({ children, onDark }: { children: React.ReactNode; onDark?: bool
   return (
     <div
       className="text-xs uppercase tracking-[0.1em] font-semibold"
-      style={{ color: onDark ? c.accentOnDark : c.accent }}
+      style={{ color: onDark ? c.darkCaption : c.muted }}
     >
       {children}
     </div>

@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Noto+Sans+TC:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,300..400&family=Geist:wght@400..700&family=Cormorant+Garamond:ital,wght@1,300;1,400&family=Noto+Sans+TC:wght@300;400;500;600&display=swap');
 
 :root {
   --font-epilogue: 'Epilogue', 'Noto Sans TC', sans-serif;
   --font-inter: 'Inter', 'Noto Sans TC', sans-serif;
+  /* Heading face: Geist (Vercel, SIL Open Font License), with Inter as fallback. */
+  --font-heading: 'Geist', 'Inter', 'Noto Sans TC', sans-serif;
   --font-cormorant: 'Cormorant Garamond', 'Noto Serif TC', serif;
 }
 
@@ -17,5 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-epilogue);
+  font-family: var(--font-heading);
+  font-optical-sizing: auto;
 }
+

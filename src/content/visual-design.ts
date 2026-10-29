@@ -47,7 +47,6 @@ export interface VisualProject {
 
 export interface VisualGroup {
   kicker: string;
-  heading: string;
   projects: VisualProject[];
 }
 
@@ -65,10 +64,9 @@ export const visualDesignContent = {
   groups: [
     {
       kicker: "Product identity",
-      heading: "Setting the visual direction for a product",
       projects: [
         {
-          meta: "Meetcard · Logo, visual direction & UI",
+          meta: "Logo, visual direction & UI",
           title: "Meetcard, a platform that matches businesses",
           text: "I turned the letter M into a bridge that also reads as a stack of business cards, then set the colours and type that carry into the product UI. The client picked this proposal and brought me on for the UI.",
           images: [
@@ -83,10 +81,9 @@ export const visualDesignContent = {
     },
     {
       kicker: "Information design",
-      heading: "Making technical ideas easy to see",
       projects: [
         {
-          meta: "Canon, ongoing direct client · Art direction & layout",
+          meta: "Ongoing direct client · Art direction & layout",
           title: "Canon imageFORCE and uniFLOW series",
           text: "Print security, security standards and AI maintenance, explained to business buyers one idea at a time.",
           images: [
@@ -113,12 +110,11 @@ export const visualDesignContent = {
     },
     {
       kicker: "Online to physical",
-      heading: "Turning an online experience into one people can walk into",
       projects: [
         {
           meta: "Eden Social Welfare Foundation · Lead UI/UX & illustration",
           title: "Little Space Hero Feifei, an online storybook",
-          text: "I led the website's UI/UX and drew Feifei and the space world, so parents and kids could read and play together on any screen. After launch it drew 10x the social engagement, over 1,000 likes and 65,000+ views, and Eden turned the yearly campaign into a long-term public site.",
+          text: "I led the website's UI/UX and created Feifei and the space world, so parents and kids could read and play together on any screen. The site brought 10x the social engagement, with over 1,000 likes and 65,000+ views. Eden then turned the yearly campaign into a long-term public site.",
           images: [
             { src: feifeiHomeDevices, alt: "Storybook home page on desktop and phone" },
             { src: feifeiIceActivity, alt: "Ice planet activity with the timer bar" },
@@ -130,7 +126,7 @@ export const visualDesignContent = {
         {
           meta: "Eden Social Welfare Foundation · Exhibition & interaction design",
           title: "Love Kids Festival, the storybook as an exhibition",
-          text: "The next year I turned the online story into a mall exhibition. I redesigned the online activities for touch screens and an arcade cabinet, then designed the key visual wall, story stations and a word puzzle wall, so families could step into the same story in person.",
+          text: "The next year I brought the online story into the real world as an interactive exhibition. I extended the same story elements into hands-on installations, building a fuller world for families and kids to step into together.",
           images: [
             { src: edenExpoIceScreens, alt: "Ice planet activity on the exhibition screens" },
             { src: edenExpoKeyVisual, alt: "Exhibition key visual wall" },
@@ -143,7 +139,6 @@ export const visualDesignContent = {
     },
     {
       kicker: "Key visual",
-      heading: "One illustration, carried across a whole campaign",
       projects: [
         {
           meta: "akaSwap · Key visual & campaign",

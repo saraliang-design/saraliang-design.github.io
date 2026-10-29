@@ -14,7 +14,7 @@ const c = {
 
 function Kicker({ children }: { children: React.ReactNode }) {
   return (
-    <div className="text-xs uppercase tracking-[0.1em] font-semibold" style={{ color: c.accent }}>
+    <div className="text-xs uppercase tracking-[0.1em] font-semibold" style={{ color: c.muted }}>
       {children}
     </div>
   );
@@ -101,12 +101,14 @@ export default function VisualDesignPage({
       <div className="max-w-[1080px] mx-auto px-6 md:px-10 pb-24">
         {content.groups.map((group) => (
           <section key={group.kicker} className="pt-16">
-            <Kicker>{group.kicker}</Kicker>
-            <h2 className="text-2xl font-bold mt-2" style={{ color: c.ink }}>{group.heading}</h2>
+            {/* The kicker alone names each group; a second, larger heading made too many layers above each project. */}
+            <h2 className="text-xs uppercase tracking-[0.1em] font-semibold" style={{ color: c.muted, fontFamily: "var(--font-inter)" }}>
+              {group.kicker}
+            </h2>
             {group.projects.map((p) => (
               <article
                 key={p.title}
-                className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-6 md:gap-10 py-9 border-t mt-6 items-start"
+                className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr] gap-6 md:gap-10 py-9 border-t mt-4 items-start"
                 style={{ borderColor: c.border }}
               >
                 <Carousel images={p.images} />

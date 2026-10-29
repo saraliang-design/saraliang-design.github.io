@@ -21,7 +21,7 @@ function Kicker({ children }: { children: React.ReactNode }) {
   return (
     <div
       className="text-xs uppercase tracking-[0.1em] font-semibold"
-      style={{ color: c.accent }}
+      style={{ color: c.muted }}
     >
       {children}
     </div>
