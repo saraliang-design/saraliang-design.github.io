@@ -548,16 +548,23 @@ function AboutContactSection() {
         className="max-w-6xl mx-auto px-6 md:px-12"
       >
         <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-6 md:gap-12">
-          {/* No display heading here: the kicker is the section title, the paragraph carries it. */}
           <h2
             className="text-xs uppercase tracking-[0.1em] font-semibold md:pt-1.5"
             style={{ color: "#9db097", fontFamily: "var(--font-inter)" }}
           >
             About
           </h2>
-          <p className="text-base md:text-[1.0625rem] leading-relaxed" style={{ color: "#c7d5c0" }}>
-            {about.body}
-          </p>
+          <div>
+            <h3
+              className="text-2xl md:text-[1.75rem] font-bold leading-snug mb-5"
+              style={{ fontFamily: "var(--font-heading)", color: "#eef4e9" }}
+            >
+              {about.headline}
+            </h3>
+            <p className="text-base md:text-[1.0625rem] leading-relaxed" style={{ color: "#c7d5c0" }}>
+              {about.body}
+            </p>
+          </div>
         </div>
 
         <div

@@ -54,7 +54,7 @@ export const sdgEnergyContent = {
 
   hero: {
     title: "A dashboard that lets families balance a city's power",
-    tags: ["Redesign", "Usability testing", "Touch screen", "3 weeks"],
+    tags: ["Redesign", "Usability testing", "Data visualization", "3 weeks"],
     description:
       "Energy Transition is a touch screen activity where visitors balance a city's power supply. I took over a version that many visitors left halfway through, and redesigned the flow and screens in three weeks so families could reach the end without help.",
     role: "UI/UX Designer",

@@ -30,12 +30,12 @@ export const homeContent = {
     titleBefore: "Designing experiences that ",
     titleHighlight: "explain themselves",
     titleAfter: ".",
-    tagline: "UI/UX Designer · Service Designer",
+    tagline: "UI/UX Designer",
   },
 
   cases: [
     {
-      label: "Web platform · UX/UI redesign",
+      label: "Web platform · UI/UX redesign",
       status: "Case study soon",
       title: "ACI Course Experience",
       text: "The Asian Classics Institute (ACI) offers Buddhist and meditation courses online, in 16 languages. I'm redesigning the course page so learners anywhere can understand what a course includes and how to enroll and donate, without having to ask.",
@@ -43,9 +43,9 @@ export const homeContent = {
       alt: "Course journey from discover to lesson, with the Discover and course pages",
     },
     {
-      label: "Touchscreen · UI & data visualization",
+      label: "Data visualization · UI/UX redesign",
       title: "Energy Transition",
-      text: "I redesigned an interactive exhibition about energy so kids and parents could read the data on their own. After rounds of testing, over 90% of visitors completed the experience.",
+      text: "I redesigned a touchscreen dashboard so kids and parents could read complex energy data on their own. After rounds of testing, over 90% of visitors completed the experience.",
       image: energyImage,
       alt: "Energy Transition dashboard on an exhibition screen",
       caseId: "sdg-energy",
@@ -68,17 +68,17 @@ export const homeContent = {
       caseId: "sync-ai",
     },
     {
-      label: "Interactive kiosks · UI system",
+      label: "Touchscreen UI · Design system",
       title: "Family play kiosks",
-      text: "I designed the screens for six family kiosks, each played with a different control, and kept one screen system across all of them so families could play on their own when staff were busy. The first two of 7 events each drew over 1,000 families.",
+      text: "I built one UI system that works across six kiosks, each with a different control, so families could play on their own when staff were busy. The first two of 7 events each drew over 1,000 families.",
       image: kiosksImage,
       alt: "A visitor reaching for the buttons on the Taiwanese Sayings kiosk",
       caseId: "kiosks",
     },
     {
-      label: "Kiosk to phone · UX journey",
+      label: "Cross-device journey · UI/UX",
       title: "A taste of Keelung",
-      text: "I designed a journey that guides visitors from an exhibition kiosk to their phone to a local restaurant, with each step telling them what to do next. Shown at the Keelung City Expo, which drew 1.01 million visits in 10 days.",
+      text: "I designed a cross-device journey from a touchscreen to the visitor's phone to a local restaurant, with each step telling people what to do next. Shown at the Keelung City Expo, which drew 1.01 million visits in 10 days.",
       image: keelungImage,
       alt: "Cooking screen on the kiosk display, with the saved hot pot page on a phone",
       caseId: "keelung",
@@ -93,6 +93,7 @@ export const homeContent = {
   },
 
   about: {
-    body: "I'm a multidisciplinary designer with a background in design consultancies. I use qualitative research to find where people get stuck, then turn it into ideas and prototypes. Talking with users inspires me most. It keeps me empathetic, and I try to represent their voice in the work. To me, design isn't decoration. It should make the experience truly better.",
+    headline: "I started by making things look good. Now I make them easy to use.",
+    body: "I trained in digital media design and started out in visual design, so I care about what people understand at first glance. Service design taught me to look past the screen, at where people actually get stuck. I notice the small things others miss: a pause before a tap, a word the client reads differently. That's what I design for: experiences that make sense without anyone explaining them.",
   },
 };

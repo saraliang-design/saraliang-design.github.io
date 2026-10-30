@@ -118,8 +118,8 @@ export const kiosksContent = {
   },
 
   hero: {
-    title: "A screen system for six family kiosks, each played a different way",
-    tags: ["Kiosk UI", "Interaction design", "Physical controls", "Screen system"],
+    title: "One UI system for six family kiosks, each played a different way",
+    tags: ["Touchscreen UI", "Interaction design", "Physical controls", "Design system"],
     description:
       "Otter Mama Park was a series of family fairs in New Taipei in 2026, run by a mayoral campaign to share city policy and keep Taiwanese in everyday use. I designed the screens for six kiosks, each with a different control, so families could play them on their own.",
     role: "UI Designer",
